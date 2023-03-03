@@ -11,8 +11,8 @@ const DataList = ({ userList }) => {
                 </tr>
             </thead>
             <tbody>
-                {userList.map(item => (
-                    <tr>
+                {userList.map((item, index) => (
+                    <tr key={index}>
                         <td>{item.name}</td>
                         <td>{item.value}</td>
                         <td>{item.date}</td>
