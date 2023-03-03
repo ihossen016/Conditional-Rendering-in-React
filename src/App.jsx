@@ -16,13 +16,23 @@ function App({ slides, userList }) {
         setData([...temp]);
     };
 
+    const date = () => {
+        const temp = data.sort(
+            (p1, p2) => new Date(p2.date) - new Date(p1.date)
+        );
+
+        // spreed the data in the same formate to
+        // parent component rerender.
+        setData([...temp]);
+    };
+
     return (
         <div className="App">
             {/* <Slides slides={slides} /> */}
 
             <div className="btnGrp">
                 <button onClick={value}>sort by value</button>
-                <button>sort by Date</button>
+                <button onClick={date}>sort by Date</button>
             </div>
 
             <DataList userList={data} />
