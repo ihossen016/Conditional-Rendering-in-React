@@ -26,8 +26,36 @@ const data = [
     },
 ];
 
+const userList = [
+    {
+        name: "test-1",
+        value: 50,
+        date: "2019-02-15",
+    },
+    {
+        name: "test-2",
+        value: 10,
+        date: "2015-12-20",
+    },
+    {
+        name: "test-3",
+        value: 55,
+        date: "2018-02-29",
+    },
+    {
+        name: "test-4",
+        value: 30,
+        date: "2017-05-13",
+    },
+    {
+        name: "test-5",
+        value: 42,
+        date: "2023-09-25",
+    },
+];
+
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <App slides={data} />
+        <App slides={data} userList={userList} />
     </React.StrictMode>
 );

@@ -21,6 +21,25 @@
     padding: 30px;
     background-color: #747bff;
 }
+
+.btnGrp {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+table {
+    width: 600px;
+    margin-top: 50px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
 @keyframes logo-spin {
     from {
         transform: rotate(0deg);
