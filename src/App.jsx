@@ -7,12 +7,13 @@ function App({ slides, userList }) {
     const [data, setData] = useState(userList);
 
     const value = () => {
-        setData(
-            data.sort((p1, p2) =>
-                p1.value < p2.value ? 1 : p1.value > p2.value ? -1 : 0
-            )
+        const temp = data.sort((p1, p2) =>
+            p1.value < p2.value ? 1 : p1.value > p2.value ? -1 : 0
         );
-        console.log(data);
+
+        // spreed the data in the same formate to
+        // parent component rerender.
+        setData([...temp]);
     };
 
     return (
